@@ -1,0 +1,52 @@
+:host{
+    .compat-bar{
+        margin-top:37px;
+        height: 42px;
+        background-color: #083d8c;
+    }
+    header{
+        height: 64px;
+        box-shadow: 0 2px 6px 3px rgba(0, 0, 0, .2);
+    }
+    .header-container{
+       max-width: 1270px !important;
+       padding:2px;
+       .menu{
+           color: #083d8c;
+           font-weight: 600;
+           font-size: 14px;
+       }
+       .location{
+           margin-left: 84px;
+            width: 174px;
+           height: 40px;
+           border:1px solid #216ddf;
+           border-top: none;
+           border-radius: 0 0  5% 5%;
+           img{
+               position: relative;
+               top:-2px;
+           }
+          span{
+              padding-left:12px;
+              position: relative;
+              font-weight: 600;
+              font-size: 14px;
+              top:-2px;
+              color:#216ddf;
+              
+          }
+       }
+    }
+    .logo{
+        width: 231px;
+      
+    }
+    .banner{
+        height: 131px;
+        background-image:url(../../../../assets/imgs/banner.png);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center center;
+    }
+}
