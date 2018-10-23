@@ -2,9 +2,41 @@
     .connect{
         height: 129px;
         background-color:#083d8c;
+        .footer-logo{
+          padding-top: 36px;
+          padding-bottom: 21px;
+        }
+        .connect-moji{
+          font-family: 'Open Sans';
+          font-weight: bold;
+          font-size: 15.23px;
+          color:#ffffff;
+          span{
+            padding-right:23px;
+          }
+          .twitter{
+            width: 18px;
+          }
+          img{
+            padding:0 9px;
+          }
+        }
     }
     .company{
         height: 41px;
         background-color: #216ddf;
+        span{
+          padding: 0 16px;
+          font-family: 'Open Sans Regular';
+          color:white;
+          font-size: 12px;
+        }
+        span:nth-child(1){
+          border-right: 1px solid white;
+        }
+        span:nth-child(3){
+          border-left: 1px solid white;
+        }
+
     }
 }

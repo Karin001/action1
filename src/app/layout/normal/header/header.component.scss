@@ -1,8 +1,20 @@
 :host{
     .compat-bar{
-        margin-top:37px;
         height: 42px;
+
         background-color: #083d8c;
+        .compat-bar-container{
+          width: 100%;
+          max-width: 1280px !important;
+          font-size: 12px;
+          color: white;
+          a:nth-child(1){
+            padding:0 47px;
+          }
+         a img{
+           padding-left: 8.5px;
+         }
+        }
     }
     header{
         height: 64px;
@@ -13,8 +25,9 @@
        padding:2px;
        .menu{
            color: #083d8c;
-           font-weight: 600;
-           font-size: 14px;
+           font-family: 'Open Sans';
+           font-weight: bold;
+           font-size: 15px;
        }
        .location{
            margin-left: 84px;
@@ -30,17 +43,18 @@
           span{
               padding-left:12px;
               position: relative;
-              font-weight: 600;
-              font-size: 14px;
+              font-family: 'Open Sans';
+              font-weight: bold;
+              font-size: 15px;
               top:-2px;
               color:#216ddf;
-              
+
           }
        }
     }
     .logo{
         width: 231px;
-      
+
     }
     .banner{
         height: 131px;

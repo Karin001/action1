@@ -3,4 +3,20 @@ html,body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    a{
+      text-decoration: none;
+      color:white;
+    }
 }
+@font-face{
+  font-family:'Open Sans';
+  /*为引入的字体命名*/
+  src:url(./assets/font/OpenSans-Bold.ttf);
+  /*定义要引入字体文件的路径*/
+  }
+  @font-face{
+    font-family:'Open Sans Regular';
+    /*为引入的字体命名*/
+    src:url(./assets/font/OpenSans-Regular.ttf);
+    /*定义要引入字体文件的路径*/
+    }
