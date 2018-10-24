@@ -17,8 +17,9 @@
         }
     }
     header{
-        height: 64px;
+        height: 60px;
         box-shadow: 0 2px 6px 3px rgba(0, 0, 0, .2);
+       position: relative;
     }
     .header-container{
        max-width: 1270px !important;
@@ -29,16 +30,34 @@
            font-weight: bold;
            font-size: 15px;
        }
+       .menu-icon{
+           height: 56px;
+           position: relative;
+           top:5px;
+           width: 56px;
+           border-radius: 50%;
+           box-shadow: 0 2px 5px 3px rgba($color: #000000, $alpha: .3);
+           margin-left: 10px;
+           background-color: white;
+           
+       }
        .location{
            margin-left: 84px;
             width: 174px;
            height: 40px;
-           border:1px solid #216ddf;
+           border:2px solid #216ddf;
+          
            border-top: none;
+           @media screen and (max-width:960px) {
+            border-top: 2px solid #216ddf;
+        }
            border-radius: 0 0  5% 5%;
            img{
                position: relative;
                top:-2px;
+               @media screen and (max-width:960px) {
+                top:0;
+            }
            }
           span{
               padding-left:12px;
@@ -48,6 +67,9 @@
               font-size: 15px;
               top:-2px;
               color:#216ddf;
+              @media screen and (max-width:960px) {
+               top:0;
+            }
 
           }
        }

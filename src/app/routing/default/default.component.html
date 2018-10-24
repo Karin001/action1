@@ -1,0 +1,72 @@
+<section class="filter" fxLayout='row' fxLayoutAlign='center center'>
+  <span>7 dealers in 28226</span>
+  <span>Filter Results</span>
+  <div class="radio-btn">
+    <input type="checkbox" name="service" id="service">
+    <label for="service">service</label>
+    <div class="check"></div>
+  </div>
+  <div class="radio-btn">
+    <input type="checkbox" name="service" id="Installation">
+    <label for="Installation">Installation</label>
+    <div class="check"></div>
+  </div>
+  <div class="radio-btn">
+    <input type="checkbox" name="service" id="Resdiential">
+    <label for="Resdiential">Resdiential</label>
+    <div class="check"></div>
+  </div>
+  <div class="radio-btn">
+    <input type="checkbox" name="service" id="Commercial">
+    <label for="Commercial">
+      Commercial
+      
+    </label>
+    <div class="check"></div>
+    
+  </div>
+  <img class="tooltip" src="assets/imgs/tooltip.png" alt="">
+</section>
+<section class="dealers-box" fxLayout='row' fxLayoutAlign='center center'>
+  <div class="dealer-container"  fxLayout='row wrap' fxLayoutAlign='center center' fxLayoutGap='20px'>
+      <div *ngFor="let item of [1,2,3]"  class="dealer" fxLayout='column' fxLayoutAlign='start center'>
+          <h1 class="tittle" fxLayout='row' fxLayoutAlign='center center'>
+            Aqua Experts
+          </h1>
+          <div class="contact" fxLayout='column' fxLayoutAlign='center center'>
+            <p class="phone" fxLayout='row' fxLayoutAlign='center center'>
+              <img src="assets/imgs/phone.png" alt="">  
+              <span>1.888.888.8888</span>
+            </p>
+            <p class="contact-hint">
+                Can’t talk now? Click below to send an email.
+            </p>
+            <button fxLayout='row' fxLayoutAlign='center center'>
+              <img src="assets/imgs/email.png" alt="">
+              <span>Contact this Pro</span>
+            </button>
+          </div>
+         <dl class="open-time" fxLayout='column' fxLayoutAlign='start center'>
+           <dt>Business Hours</dt>
+           <dd>Weekdays 7:00am - 7:00pm</dd>
+           <dd>Saturdays 7:00am - 3:00</dd>
+          <dd>Sundays - CLOSED</dd>
+         </dl>
+         <div class="tags" fxLayout='row wrap' fxLayoutAlign='start center'>
+           <p fxFlex="50%"  fxLayout='row' fxLayoutAlign='center center'>
+             <img src="assets/imgs/star.png" alt="">
+             <span>Installation Pro</span>
+           </p>
+           <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
+             <img src="assets/imgs/gear.png" alt="">
+             <span>Service Pro</span>
+           </p>
+           <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
+             <img src="assets/imgs/home.png" alt="">
+             <span>Residential Pro</span>
+           </p>
+         </div>
+        </div>
+  </div>
+  
+</section>

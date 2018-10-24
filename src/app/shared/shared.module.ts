@@ -13,6 +13,7 @@ const importModules = [
 @NgModule({
   imports:importModules,
   declarations: [],
-  exports:importModules
+  exports:[...importModules],
+  providers:[],
 })
 export class SharedModule { }
