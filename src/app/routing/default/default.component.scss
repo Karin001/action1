@@ -1,16 +1,19 @@
 :host{
     .filter{
-        height: 84px;
+        padding: 30px 0;
+        max-width: 1280px;
+        margin: 0 auto;
         background-color: #f6f6f6;
-        .tooltip{
-            background-color: #d8d8d8;
-            padding: 9px;
-            position: relative;
-            left: -15px;
+        .filter-container{
+          width: 400px;
+
         }
         span{
-            padding:0 31px;
+            margin:0 31px;
             font-family: 'Open Sans';
+            height: 46px;
+            padding: 0 12px;
+            line-height: 46px;
             font-size: 14px;
         }
         span:nth-child(1){
@@ -18,32 +21,62 @@
         }
         span:nth-child(2){
             color:#3f3f3f;
-            padding-right: 62px;
+
+            @media screen and (max-width:960px) {
+              background-color: #fff;
+              border: 1px solid #d8d8d8;
+              margin-right: 0px;
+            }
+        }
+        .arrow-icon{
+          height: 48px;
+          border: 1px solid #d8d8d8;
+          border-left: none;
+          background-color: #fff;
+          width: 48px;
+        }
+        .check-container{
+          @media screen and (max-width:960px) {
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #d8d8d8;
+          }
         }
         .radio-btn {
-            position: relative;
+            min-width: 92px;
+            height: 23px;
+            margin-right: 37px;
+            @media screen and (max-width:960px) {
+
+              margin-right: 0px;
+            }
+            .tooltip{
+              background-color: #d8d8d8;
+              padding: 9px;
+              margin-left:5px;
+          }
             input[type=checkbox]{
                 position: absolute;
                 visibility: hidden;
               }
               label{
                 display: block;
-                position: relative;
+
                 font-family: 'Open Sans';
                 font-size: 14px;
-                padding: 25px 25px 25px 36.5px;
-                margin: 10px auto;
-                top:7px;
-                height: 30px;
-                
+               // padding: 25px 25px 25px 36.5px;
+
+
+
+
                 z-index: 9;
                 cursor: pointer;
                 transition: all 0.25s linear;
-                
+
               }
               .check{
                 display: block;
-                position: absolute;
+                margin-right: 13px;
                 border: 1px solid #d8d8d8;
                 box-sizing: border-box;
                 height: 23px;
@@ -53,7 +86,7 @@
                 left: 0px;
                 z-index: 5;
                 transition: border .25s linear;
-              
+
               }
               input[type=checkbox]:checked ~ .check {
                 border: 8px solid #216ddf;
@@ -62,8 +95,8 @@
                 color: #216ddf;
               }
         }
-        
-          
+
+
     }
     .dealers-box{
         .dealer-container{
@@ -88,7 +121,7 @@
                     border-radius: 50%;
                     background-color: #216ddf;
                     padding: 5px;
-                    
+
                 }
                 span{
                     padding:0 5px;
@@ -122,9 +155,9 @@
                 };
             }
             .tags{
-              
+
                 height: 97px;
-                background-color: #f6f6f6;  
+                background-color: #f6f6f6;
                 width: 100%;
                 p{
                     box-sizing: border-box;
@@ -132,7 +165,7 @@
                     span{
                         padding-left: 10px;
                     }
-                }   
+                }
             }
 
 
