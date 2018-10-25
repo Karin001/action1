@@ -8,7 +8,7 @@
   </div>
 
 
-  <div class="toggle-menu" #toggle_menu fxLayout='row'    fxLayout.lt-md='column'  fxLayoutAlign='start'>
+  <div class="toggle-menu" #toggle_menu fxLayout='row'   [fxShow]="show" fxLayout.lt-md='column'  fxLayoutAlign='start'>
     <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center' fxLayoutAlign.lt-md="start center">
       <input type="checkbox" name="service" id="service">
       <div class="check"></div>
@@ -39,7 +39,7 @@
 
 </section>
 <section class="dealers-box" fxLayout='row' fxLayoutAlign='center center'>
-  <div class="dealer-container" fxLayout='row wrap' fxLayoutAlign='center center' fxLayoutGap="20px" fxLayoutGap.xs="0px">
+  <div class="dealer-container" fxLayout='row wrap' fxLayoutAlign='center center' fxLayoutGap="20px" fxLayoutGap.lt-md="0px">
     <div *ngFor="let item of [1,2,3]" class="dealer" fxLayout='column' fxLayoutAlign='start center'>
       <h1 class="tittle" fxLayout='row' fxLayoutAlign='center center'>
         Aqua Experts

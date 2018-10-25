@@ -1,4 +1,10 @@
 :host{
+  .combo-header{
+    position: fixed;
+    top:0;
+    width: 100vw;
+    z-index: 20;
+  }
     .compat-bar{
         height: 42px;
 
@@ -19,12 +25,13 @@
     header{
         height: 60px;
         box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .2);
+        background-color: white;
        position: relative;
     }
     .header-container{
        max-width: 1260px !important;
        padding:2px 8px;
-      
+
        .menu{
            color: #083d8c;
            font-family: 'Open Sans';
@@ -40,7 +47,9 @@
            box-shadow: 0 2px 5px 3px rgba($color: #000000, $alpha: .3);
            margin-left: 10px;
            background-color: white;
-
+          &:hover{
+            cursor: pointer;
+          }
        }
        .location{
            margin-left: 84px;
@@ -86,6 +95,7 @@
 
     }
     .banner{
+        margin-top: 131px;
         height: 131px;
         background-image:url(../../../../assets/imgs/banner.png);
         background-repeat: no-repeat;

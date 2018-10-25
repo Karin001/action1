@@ -40,35 +40,41 @@
           <div class="form-control">
             <label fxLayout="row" fxLayoutAlign="space-between center">
               <span>Do you currently own a pool or spa?</span>
-              <span class="optional">optional</span>
+              <span class="optional" fxHide.lt-md="true">optional</span>
             </label>
-      
+
             <button fxHide.lt-md="true" type="button">Yes</button>
             <button fxHide.lt-md="true" type="button">No</button>
-      
+
             <div fxHide fxShow.lt-md="true" fxLayout="row" fxLayoutAlign="start start">
               <div  class="radio-btn" fxLayout='row' fxLayoutAlign='start center'>
                 <input type="checkbox" id="yes">
                 <div class="check"></div>
                 <label  for="yes">Yes</label>
-      
+
               </div>
               <div   class="radio-btn" fxLayout='row' fxLayoutAlign='start center'>
                 <input type="checkbox"  id="no">
                 <div class="check"></div>
                 <label   for="no">No</label>
-      
+
               </div>
             </div>
-            <div class="send" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <div  fxHide.lt-md="true" class="send" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
               <span>Send my email</span>
               <img src="assets/imgs/arrow-right.png" alt="">
             </div>
+            <div class="mobile-send" fxHide fxShow.lt-md="true" >
+              <span>Send</span>
+            </div>
           </div>
-      
+
         </form>
-        <div class="last-hint">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure ratione ipsum soluta consectetur, e</p>
-        </div>
+
       </section>
+      <div class="last-hint" fxHide.lt-md="true">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure ratione ipsum soluta consectetur,
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iure ratione ipsum soluta consectetur
+        </p>
+      </div>
 </div>

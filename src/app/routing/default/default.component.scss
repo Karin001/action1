@@ -22,7 +22,7 @@
         span:nth-child(1){
           color:#216ddf;
           @media screen and (max-width:960px) {
-            
+
              }
 
         }
@@ -52,16 +52,19 @@
         }
         .radio-btn {
             min-width: 92px;
+            max-width: 110px;
             height: 23px;
             margin-right: 37px;
+            position: relative;
             @media screen and (max-width:960px) {
 
               margin-right: 0px;
             }
             .tooltip{
               background-color: #d8d8d8;
+              position: absolute;
               padding: 9px;
-              margin-left:5px;
+              right: -41px;
           }
             input[type=checkbox]{
                 position: absolute;
@@ -69,10 +72,16 @@
               }
               label{
                 display: block;
-
+                -webkit-tap-highlight-color: transparent;
                 font-family: 'Open Sans';
                 font-size: 14px;
-               // padding: 25px 25px 25px 36.5px;
+                height: 23px;
+                line-height: 23px;
+                position: relative;
+                left: 12px;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left:20px;               // padding: 25px 25px 25px 36.5px;
 
 
 
@@ -83,13 +92,14 @@
 
               }
               .check{
+                position: absolute;
                 display: block;
                 margin-right: 13px;
                 border: 1px solid #d8d8d8;
                 box-sizing: border-box;
                 height: 23px;
                 width: 23px;
-                top: 40px;
+
                 border-radius: 3px;
                 left: 0px;
                 z-index: 5;
@@ -126,7 +136,11 @@
             box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .2);
             .tittle{
                 height: 103px;
-                width: 374px;
+                width: 90%;
+                @media screen and (max-width:960px) {
+                  width: 100%;
+
+                }
                 font-size: 25px;
                 font-weight: 100;
                 border-bottom: 1px solid #ececec;
@@ -136,9 +150,9 @@
                     border-radius: 50%;
                     background-color: #216ddf;
                     padding: 5px;
-                    
-                   
-                    
+
+
+
                 }
                 span{
                     padding:0 5px;
@@ -213,11 +227,12 @@
     position: fixed;
     z-index: 126;
     background-color: rgba(0, 0, 0, .6);
-   
+
     .modal-con{
         position: relative;
+
        margin: 60px 0;
         max-height: none !important;
-   
+
     }
 }

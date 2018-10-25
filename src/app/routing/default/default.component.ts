@@ -22,7 +22,7 @@ export class DefaultComponent implements OnInit {
     private rd2: Renderer2,
     private comfac:ComponentFactoryResolver,
     private el: ElementRef
-  ) { 
+  ) {
     console.log(this.view)
   }
 
@@ -33,13 +33,16 @@ export class DefaultComponent implements OnInit {
     ]);
 
     layoutChanges.subscribe(result => {
+      this.show = true;
       if(result.matches) {
-        this.show = true;
+        console.log('!!!')
+
         console.log(this.filter_con.nativeElement)
         this.rd2.appendChild(this.filter_con.nativeElement,this.toggle_menu.nativeElement);
         this.rd2.setStyle(this.toggle_menu.nativeElement,'display','block')
         this.rd2.setStyle(this.toggle_menu.nativeElement,'width','100%')
       } else {
+        console.log('---')
         const pNond = this.rd2.parentNode(this.filter_con.nativeElement);
         this.rd2.appendChild(pNond,this.toggle_menu.nativeElement);
         this.rd2.setStyle(this.toggle_menu.nativeElement,'width','auto')
@@ -47,14 +50,17 @@ export class DefaultComponent implements OnInit {
     })
   }
   toggle(){
+    console.log('in',this.show);
     if(this.show){
-      this.rd2.setStyle(this.toggle_menu.nativeElement,'display','none')
+
       this.show = false;
+      console.log('toggle!!!!!',this.show);
     } else{
-      this.rd2.setStyle(this.toggle_menu.nativeElement, 'display','block')
+
       this.show = true;
+      console.log('toggle!!!!!',this.show);
     }
-    
+
   }
   openModal(){
     const componentFactory = this.comfac.resolveComponentFactory(EmailModalComponent);
@@ -62,7 +68,7 @@ export class DefaultComponent implements OnInit {
     this.modalComponent =  this.view.createComponent(componentFactory);
     this.rd2.appendChild(this.backDropCon.nativeElement,this.modalComponent.location.nativeElement)
     this.modalComponent.instance.close$.pipe(take(1)).subscribe(close=>this.modalComponent.destroy())
-    //this.rd2.setStyle(this.modalComponent.location.nativeElement,'width','400px')
+
   }
   cancel(){
     this.rd2.setStyle(this.backDrop.nativeElement, 'display','none')
