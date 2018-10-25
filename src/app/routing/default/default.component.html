@@ -1,84 +1,87 @@
 <section class="filter" fxLayout='rowv wrap' fxLayoutAlign='center center'>
-  <div class="filter-container" fxLayout='row wrap' fxLayoutAlign='end center'>
+  <div #filter_con class="filter-container" fxLayout='row wrap' fxLayoutAlign='start center'>
     <span>7 dealers in 28226</span>
-  <span class="filter-switch">Filter Results</span>
+    <span class="filter-switch">Filter Results</span>
+    <div  fxHide fxShow.lt-md="true" class="arrow-icon" fxLayout='row' fxLayoutAlign='center center' (click)="toggle()">
+      <img fxHide fxShow.lt-md="true" src="assets/imgs/down-arrow.png" alt="">
+    </div>
   </div>
-  <div fxHide fxShow.lt-md="true" class="arrow-icon" fxLayout='row' fxLayoutAlign='center center' >
-    <img fxHide fxShow.lt-md="true" src="assets/imgs/down-arrow.png" alt="">
-  </div>
 
-  <div fxLayout='row'  fxLayout.lt-md='column' fxFlex.lt-md="100%"  fxLayoutAlign='start center'>
-    <div class="check-container" fxFlex="100%" fxLayout='row' fxLayout.lt-md='column' fxLayoutAlign='space-around start'>
-      <div  class="radio-btn" fxLayout='row' fxLayoutAlign='center center'>
-        <input type="checkbox" name="service" id="service">
-        <div class="check"></div>
-        <label for="service">service</label>
 
-      </div>
-      <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center'>
-        <input type="checkbox" name="service" id="Installation">
-        <div class="check"></div>
-        <label for="Installation">Installation</label>
+  <div class="toggle-menu" #toggle_menu fxLayout='row'    fxLayout.lt-md='column'  fxLayoutAlign='start'>
+    <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center' fxLayoutAlign.lt-md="start center">
+      <input type="checkbox" name="service" id="service">
+      <div class="check"></div>
+      <label for="service">service</label>
 
-      </div>
-      <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center'>
-        <input type="checkbox" name="service" id="Resdiential">
-        <div class="check"></div>
-        <label for="Resdiential">Resdiential</label>
+    </div>
+    <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center' fxLayoutAlign.lt-md="start center">
+      <input type="checkbox" name="service" id="Installation">
+      <div class="check"></div>
+      <label for="Installation">Installation</label>
 
-      </div>
-      <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center'>
-        <input type="checkbox" name="service" id="Commercial">
-        <div class="check"></div>
-        <label for="Commercial">
-          Commercial
-        </label>
-        <img class="tooltip" src="assets/imgs/tooltip.png" alt="">
-      </div>
+    </div>
+    <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center' fxLayoutAlign.lt-md="start center">
+      <input type="checkbox" name="service" id="Resdiential">
+      <div class="check"></div>
+      <label for="Resdiential">Resdiential</label>
+
+    </div>
+    <div class="radio-btn" fxLayout='row' fxLayoutAlign='center center' fxLayoutAlign.lt-md="start center">
+      <input type="checkbox" name="service" id="Commercial">
+      <div class="check"></div>
+      <label for="Commercial">
+        Commercial
+      </label>
+      <img class="tooltip" src="assets/imgs/tooltip.png" alt="">
     </div>
   </div>
 
 </section>
 <section class="dealers-box" fxLayout='row' fxLayoutAlign='center center'>
-  <div class="dealer-container"  fxLayout='row wrap' fxLayoutAlign='center center' fxLayoutGap='20px'>
-      <div *ngFor="let item of [1,2,3]"  class="dealer" fxLayout='column' fxLayoutAlign='start center'>
-          <h1 class="tittle" fxLayout='row' fxLayoutAlign='center center'>
-            Aqua Experts
-          </h1>
-          <div class="contact" fxLayout='column' fxLayoutAlign='center center'>
-            <p class="phone" fxLayout='row' fxLayoutAlign='center center'>
-              <img src="assets/imgs/phone.png" alt="">
-              <span>1.888.888.8888</span>
-            </p>
-            <p class="contact-hint">
-                Can’t talk now? Click below to send an email.
-            </p>
-            <button fxLayout='row' fxLayoutAlign='center center'>
-              <img src="assets/imgs/email.png" alt="">
-              <span>Contact this Pro</span>
-            </button>
-          </div>
-         <dl class="open-time" fxLayout='column' fxLayoutAlign='start center'>
-           <dt>Business Hours</dt>
-           <dd>Weekdays 7:00am - 7:00pm</dd>
-           <dd>Saturdays 7:00am - 3:00</dd>
-          <dd>Sundays - CLOSED</dd>
-         </dl>
-         <div class="tags" fxLayout='row wrap' fxLayoutAlign='start center'>
-           <p fxFlex="50%"  fxLayout='row' fxLayoutAlign='center center'>
-             <img src="assets/imgs/star.png" alt="">
-             <span>Installation Pro</span>
-           </p>
-           <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
-             <img src="assets/imgs/gear.png" alt="">
-             <span>Service Pro</span>
-           </p>
-           <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
-             <img src="assets/imgs/home.png" alt="">
-             <span>Residential Pro</span>
-           </p>
-         </div>
-        </div>
+  <div class="dealer-container" fxLayout='row wrap' fxLayoutAlign='center center' fxLayoutGap="20px" fxLayoutGap.xs="0px">
+    <div *ngFor="let item of [1,2,3]" class="dealer" fxLayout='column' fxLayoutAlign='start center'>
+      <h1 class="tittle" fxLayout='row' fxLayoutAlign='center center'>
+        Aqua Experts
+      </h1>
+      <div class="contact" fxLayout='column' fxLayoutAlign='center center'>
+        <p class="phone" fxLayout='row' fxLayoutAlign='center center'>
+          <img src="assets/imgs/phone.png" alt="">
+          <span>1.888.888.8888</span>
+        </p>
+        <p class="contact-hint">
+          Can’t talk now? Click below to send an email.
+        </p>
+        <button fxLayout='row' fxLayoutAlign='center center' (click)="openModal()">
+          <img src="assets/imgs/email.png" alt="">
+          <span>Contact this Pro</span>
+        </button>
+      </div>
+      <dl class="open-time" fxLayout='column' fxLayoutAlign='start center'>
+        <dt>Business Hours</dt>
+        <dd>Weekdays 7:00am - 7:00pm</dd>
+        <dd>Saturdays 7:00am - 3:00</dd>
+        <dd>Sundays - CLOSED</dd>
+      </dl>
+      <div class="tags" fxLayout='row wrap' fxLayoutAlign='start center'>
+        <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
+          <img src="assets/imgs/star.png" alt="">
+          <span>Installation Pro</span>
+        </p>
+        <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
+          <img src="assets/imgs/gear.png" alt="">
+          <span>Service Pro</span>
+        </p>
+        <p fxFlex="50%" fxLayout='row' fxLayoutAlign='center center'>
+          <img src="assets/imgs/home.png" alt="">
+          <span>Residential Pro</span>
+        </p>
+      </div>
+    </div>
   </div>
 
 </section>
+
+<div (click)="cancel()" class="backDrop" [style.display]="'none'" #backDrop >
+  <div class="modal-con" #backDrop_con fxLayout="row" fxLayoutAlign="center center" ></div>
+</div>
