@@ -1,28 +1,28 @@
 <div class="combo-header">
   <div fxHide.lt-md="true" class="compat-bar" fxLayout='row' fxLayoutAlign='center center'>
     <div class="compat-bar-container" fxLayout='row' fxLayoutAlign='end center'>
-        <a href="">Dealers and Distributors</a>
+      <a href="">Dealers and Distributors</a>
 
-        <a href="">Commercial Service <img src="assets/imgs/rasterized.png" alt=""></a>
+      <a href="">Commercial Service <img src="assets/imgs/rasterized.png" alt=""></a>
     </div>
 
   </div>
-  <header fxLayout='row' fxLayoutAlign='center start' fxLayoutAlign.lt-md = 'center cent'>
+  <header fxLayout='row' fxLayoutAlign='center start' fxLayoutAlign.lt-md='center cent'>
     <div class="header-container" fxFlex="100%" fxLayout='row' fxLayoutAlign='space-between center'>
       <img class="logo" src="assets/imgs/logo.png" alt="">
       <div class="function" fxLayout='row' fxLayoutAlign='space-between center'>
         <div fxHide.lt-md="true" class="menu" fxLayout='row' fxLayoutGap="58px">
-          <span>Pools & Spas</span>
-          <span>Supplies</span>
-          <span>Resources</span>
-          <span>Services</span>
+          <span [routerLink]="[ '/home/pools']">Pools & Spas</span>
+          <span [routerLink]="[ '/home/Supplies']">Supplies</span>
+          <span [routerLink]="[ '/home/Resources']">Resources</span>
+          <span [routerLink]="[ '/home/Services']">Services</span>
         </div>
         <div class="location" fxLayout='row' fxLayoutAlign='center center'>
           <img src="assets/imgs/location.png" alt="">
           <span>{{findName}}</span>
         </div>
-        <div class="menu-icon" fxHide fxShow.lt-md = "true" fxLayout='row' fxLayoutAlign='center center'>
-            <img src="assets/imgs/menu.png" alt="">
+        <div class="menu-icon" fxHide fxShow.lt-md="true" fxLayout='row' fxLayoutAlign='center center'>
+          <img src="assets/imgs/menu.png" alt="">
         </div>
 
       </div>

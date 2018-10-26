@@ -37,6 +37,13 @@
            font-family: 'Open Sans';
            font-weight: bold;
            font-size: 15px;
+          span{
+            &:hover{
+                cursor: pointer;
+                color: rgb(55, 214, 214);
+                transition: color 0.2s linear; 
+            }
+          }
        }
        .menu-icon{
            height: 56px;
@@ -56,7 +63,11 @@
             width: 174px;
            height: 40px;
            border:2px solid #216ddf;
-
+            &:hover{
+                cursor: pointer;
+                border-color:  rgb(55, 214, 214);
+                transition: border-color 0.2s linear; 
+            }
            border-top: none;
            @media screen and (max-width:960px) {
             border-top: 2px solid #216ddf;
