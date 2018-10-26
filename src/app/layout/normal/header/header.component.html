@@ -1,15 +1,15 @@
 <div class="combo-header">
   <div fxHide.lt-md="true" class="compat-bar" fxLayout='row' fxLayoutAlign='center center'>
     <div class="compat-bar-container" fxLayout='row' fxLayoutAlign='end center'>
-      <a href="">Dealers and Distributors</a>
+      <a >Dealers and Distributors</a>
 
-      <a href="">Commercial Service <img src="assets/imgs/rasterized.png" alt=""></a>
+      <a >Commercial Service <img src="assets/imgs/rasterized.png" alt=""></a>
     </div>
 
   </div>
   <header fxLayout='row' fxLayoutAlign='center start' fxLayoutAlign.lt-md='center cent'>
     <div class="header-container" fxFlex="100%" fxLayout='row' fxLayoutAlign='space-between center'>
-      <img class="logo" src="assets/imgs/logo.png" alt="">
+      <img  [routerLink]="['/home']" class="logo" src="assets/imgs/logo.png" alt="">
       <div class="function" fxLayout='row' fxLayoutAlign='space-between center'>
         <div fxHide.lt-md="true" class="menu" fxLayout='row' fxLayoutGap="58px">
           <span [routerLink]="[ '/home/pools']">Pools & Spas</span>
@@ -22,7 +22,7 @@
           <span>{{findName}}</span>
         </div>
         <div class="menu-icon" fxHide fxShow.lt-md="true" fxLayout='row' fxLayoutAlign='center center'>
-          <img src="assets/imgs/menu.png" alt="">
+          <img src="assets/imgs/menu.png" alt="" [appContextMenu]="contexMenu">
         </div>
 
       </div>

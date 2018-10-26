@@ -1,0 +1,6 @@
+<ul class="rotate-center">
+  <li *ngFor="let item of items"  (click)="item.actionFn()">
+    <i [class]="item.icon"></i>
+    <span >{{item.name}}</span>
+  </li>
+</ul>

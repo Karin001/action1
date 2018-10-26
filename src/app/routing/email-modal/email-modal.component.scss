@@ -104,11 +104,17 @@
               border-top:1px solid #ececec;
               padding: 20px 10px 5px 5px;
               margin-top: 5px;
+
               span{
                 font-family: 'Open Sans';
                 font-size: 15px;
                 color:#0bc9c8;
                 float: right;
+                &:hover{
+                  cursor: pointer;
+                  color: #216ddf;
+                  transition: color 0.2s linear;
+                }
               }
             }
         }
@@ -124,7 +130,7 @@
           padding: 9px;
           margin-left:19px;
       }
-        input[type=checkbox]{
+        input[type=radio]{
             position: absolute;
             visibility: hidden;
           }
@@ -163,10 +169,10 @@
                 transition: border .25s linear;
 
           }
-          input[type=checkbox]:checked ~ .check {
+          input[type=radio]:checked ~ .check {
             border: 8px solid #216ddf;
           }
-          input[type=checkbox]:checked ~ label{
+          input[type=radio]:checked ~ label{
             color: #216ddf;
           }
       }

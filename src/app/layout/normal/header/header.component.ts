@@ -9,6 +9,28 @@ import { tap, map } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   findName: string;
+  contexMenu = [
+    {
+      icon: '',
+      name: 'Pools & Spas',
+      actionFn: () => { },
+    },
+    {
+      icon: '',
+      name: 'Supplies',
+      actionFn: () => { },
+    },
+    {
+      icon: '',
+      name: 'Resources',
+      actionFn: () => { },
+    },
+    {
+      icon: '',
+      name: 'Services',
+      actionFn: () => { },
+    },
+  ];
   constructor(
     private breakpointObserver: BreakpointObserver
   ) { }
@@ -20,7 +42,7 @@ export class HeaderComponent implements OnInit {
     ]);
 
     layoutChanges.subscribe(result => {
-      if(result.matches) {
+      if (result.matches) {
         this.findName = 'FIND A PRO';
       } else {
         this.findName = 'Find a Pool Pro';

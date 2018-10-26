@@ -19,6 +19,7 @@
           }
          a img{
            padding-left: 8.5px;
+           outline: none;
          }
         }
     }
@@ -38,10 +39,11 @@
            font-weight: bold;
            font-size: 15px;
           span{
+            outline: none;
             &:hover{
                 cursor: pointer;
                 color: rgb(55, 214, 214);
-                transition: color 0.2s linear; 
+                transition: color 0.2s linear;
             }
           }
        }
@@ -66,7 +68,7 @@
             &:hover{
                 cursor: pointer;
                 border-color:  rgb(55, 214, 214);
-                transition: border-color 0.2s linear; 
+                transition: border-color 0.2s linear;
             }
            border-top: none;
            @media screen and (max-width:960px) {
@@ -78,6 +80,8 @@
            img{
                position: relative;
                top:-2px;
+               outline: none;
+
                @media screen and (max-width:960px) {
                 top:0;
             }
@@ -100,6 +104,10 @@
     }
     .logo{
         width: 231px;
+        outline: none;
+        &:hover{
+          cursor: pointer;
+        }
         @media screen and (max-width:960px) {
             width: 153px;
          }

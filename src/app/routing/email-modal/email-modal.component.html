@@ -8,27 +8,27 @@
         <div class="hint">
           <p>Fill out the form below and Premium Pools & Spas of Charlotte w</p>
         </div>
-        <form>
+        <form >
           <div class="form-control">
             <label for="name" fxLayout="row" fxLayoutAlign="space-between center">
               <span>First and last name</span>
-              <span class="checked-img" [style.backgroundImage]="checkedImg"></span>
+              <span class="checked-img" [style.backgroundImage]="formName.valid?checkedImg:unCheckedImg"></span>
             </label>
-            <input type="text" id="name" value="Jane Smith">
+            <input type="text" [(ngModel)]="form.name" #formName="ngModel" required forbidenWord id="name" name="name" value="Jane Smith">
           </div>
           <div class="form-control" class="phone">
             <label for="phone" fxLayout="row" fxLayoutAlign="space-between center">
               <span>Phone number</span>
-              <span class="checked-img" [style.backgroundImage]="unCheckedImg"></span>
+              <span class="checked-img" [style.backgroundImage]="formPhone.valid?checkedImg:unCheckedImg"></span>
             </label>
-            <input type="text" id="phone">
+            <input type="text" [(ngModel)]="form.phone" #formPhone="ngModel" phoneNumber required id="phone" name="phone">
           </div>
           <div class="form-control">
             <label for="email" fxLayout="row" fxLayoutAlign="space-between center">
               <span>Email address</span>
-              <span class="checked-img" [style.backgroundImage]="unCheckedImg"></span>
+              <span class="checked-img" [style.backgroundImage]="formEmail.valid?checkedImg:unCheckedImg"></span>
             </label>
-            <input type="text" id="email">
+            <input type="text" id="email" emailCheck #formEmail="ngModel" [(ngModel)]="form.email" name="email">
           </div>
           <div class="form-control">
             <label for="comments" fxLayout="row" fxLayoutAlign="space-between center">
@@ -43,18 +43,18 @@
               <span class="optional" fxHide.lt-md="true">optional</span>
             </label>
 
-            <button fxHide.lt-md="true" type="button">Yes</button>
-            <button fxHide.lt-md="true" type="button">No</button>
+            <button fxHide.lt-md="true" type="button" [style.backgroundColor]="form.currently?'#01c7c6':''" (click)="form.currently=true">Yes</button>
+            <button fxHide.lt-md="true" type="button" [style.backgroundColor]="!form.currently?'#01c7c6':''" (click)="form.currently=false">No</button>
 
             <div fxHide fxShow.lt-md="true" fxLayout="row" fxLayoutAlign="start start">
               <div  class="radio-btn" fxLayout='row' fxLayoutAlign='start center'>
-                <input type="checkbox" id="yes">
+                <input type="radio" id="yes" name="desire" checked>
                 <div class="check"></div>
                 <label  for="yes">Yes</label>
 
               </div>
               <div   class="radio-btn" fxLayout='row' fxLayoutAlign='start center'>
-                <input type="checkbox"  id="no">
+                <input type="radio"  id="no" name="desire">
                 <div class="check"></div>
                 <label   for="no">No</label>
 
